@@ -1,5 +1,5 @@
 <template>
-  <q-toolbar class="bg-secondary text-white q-my-md shadow-2">
+  <q-toolbar class="bg-grey text-white q-my-md shadow-2">
     <q-btn flat class="text-white" >
 <router-link to="/" right>Home             
     </router-link>
@@ -68,5 +68,9 @@ export default {
 #nav a.router-link-exact-active{
   color: aqua;
   background: crimson;
+}
+#q-btn{
+  color: brown;
+  text-decoration-color: beige;
 }
 </style>
