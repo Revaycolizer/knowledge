@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import ServicesView from '../views/ServicesView.vue'
 import HomeOut from '../views/HomeOut.vue'
 import HomeView from '../views/HomeView.vue'
+import ContactUs from '../views/ContactUs.vue'
 
 
 
@@ -28,6 +29,11 @@ const routes = [
     path: '/services',
     name: 'services',
     component: ServicesView
+  },
+  {
+    path: '/contact',
+    name: 'contact',
+    component: ContactUs
   },
   {
     path: '/:catchAll(.*)',

@@ -6,3 +6,7 @@
     <p class="center text-h4">All people's idea are being respected and the work is done efficiently.</p>
   </div>
 </template>
+<script>
+
+</script>
+
