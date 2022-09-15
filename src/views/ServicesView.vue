@@ -97,10 +97,10 @@
 
 </template>
 <script>
-  import image from '../assets/dvp.jpg'
-  import learning from '../assets/learning.jpg'
-  import testing from '../assets/testing.jpg'
-  import mobile from '../assets/mobile.jpg'
+  import image from '../assets/dvlp.jpg'
+  import learning from '../assets/online learning.jpg'
+  import testing from '../assets/software testing.jpg'
+  import mobile from '../assets/mobile apps.jpg'
   import { ref } from 'vue'
   
   export default {
