@@ -97,12 +97,12 @@ Compatible with a Mobile Platform.<br />
           flat
           dense
           :icon="expanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
-          @click="expanded = !expanded"
+          @click="learn = !learn"
         />
       </q-card-actions>
 
       <q-slide-transition>
-        <div v-show="expanded">
+        <div v-show="learn">
           <q-separator />
           <q-card-section class="text-subitle2">
             Blogging teachings are well provided by our professional blogger.<br />
@@ -145,12 +145,12 @@ Student writing is often seen by just one person on the planet (their instructor
           flat
           dense
           :icon="expanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
-          @click="expanded = !expanded"
+          @click="test = !test"
         />
       </q-card-actions>
 
       <q-slide-transition>
-        <div v-show="expanded">
+        <div v-show="test">
           <q-separator />
           <q-card-section class="text-subitle2">
             Software Testing
@@ -188,12 +188,12 @@ Student writing is often seen by just one person on the planet (their instructor
           flat
           dense
           :icon="expanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
-          @click="expanded = !expanded"
+          @click="dvp = !dvp"
         />
       </q-card-actions>
 
       <q-slide-transition>
-        <div v-show="expanded">
+        <div v-show="dvp">
           <q-separator />
           <q-card-section class="text-subitle2">
             Software Development
@@ -219,6 +219,9 @@ Student writing is often seen by just one person on the planet (their instructor
   export default {
     setup () {
       return {
+        learn:ref(false),
+        test:ref(false),
+        dvp:ref(false),
         persistent: ref(false),
         expanded: ref(false),
         image:image,
