@@ -20,8 +20,27 @@
       </q-card-section>
 
       <q-card-actions>
-        <!-- <q-btn flat color="dark" label="Share" />
-        <q-btn flat color="primary" label="Book" /> -->
+        <!-- <q-btn flat color="dark" label="Share" /> -->
+        <!-- <q-btn @click="dialog=!dialog" flat color="primary" label="Book" /> -->
+        <div class="q-pa-md q-gutter-sm">
+    <q-btn label="See price" color="primary" flat @click="persistent = true" />
+
+    <q-dialog v-model="persistent" persistent transition-show="scale" transition-hide="scale">
+      <q-card class="bg-teal text-white" style="width: 400px">
+        <q-card-section>
+          <div class="text-h6" align="center">Price</div>
+        </q-card-section>
+
+        <q-card-section class="q-pt-none">
+          Only at a cheap price and affordable
+        </q-card-section>
+
+        <q-card-actions align="right" class="bg-white text-teal">
+          <q-btn flat label="OK" v-close-popup />
+        </q-card-actions>
+      </q-card>
+    </q-dialog>
+  </div>
 
         <q-space />
 
@@ -39,13 +58,19 @@
         <div v-show="expanded">
           <q-separator />
           <q-card-section class="text-subitle2">
-            Mobile app development
+            Mobile application development is the process of creating software applications that run on a mobile device, and a typical mobile application utilizes a network connection to work with remote computing resources.<br /> What are 5 characteristics that make a good app?
+<br />5 Characteristics of Winning Mobile Apps:<br />
+Great UI (User Interface).<br />
+Fast Loading Time and High Performance.<br />
+Extremely Helpful Customer Support.<br />
+Quick Adaptation to Users' Needs.<br />
+Compatible with a Mobile Platform.<br />
           </q-card-section>
         </div>
       </q-slide-transition>
     </q-card>
 
-    <q-card>
+    <q-card flat>
     <h5 style="text-align:center;"> 2.Online Learning</h5>
   
   
@@ -80,7 +105,12 @@
         <div v-show="expanded">
           <q-separator />
           <q-card-section class="text-subitle2">
-            Online Learning
+            Blogging teachings are well provided by our professional blogger.<br />
+            Although people often think of social media as a space for non-academic interactions, blogs can be helpful tools for instructors interested in enhancing their students’ communication skills and increasing their students’ investment in learning.
+
+Blogs can be spaces for informal or formal writing by students, and the capacity of blogs to support multiple forms of media (images, videos, links, and so on) can help students bring creativity to their communication. Most blogs includes tools for commenting and discussion, enabling students to engage their ideas in conversation with others, either within their local learning communities or on the open Web.
+
+Student writing is often seen by just one person on the planet (their instructor), which can make writing assignments feel like “busy work.” The dynamic interaction between writer and audience that blogs facilitate can help students see real value in their academic writing and take that writing more seriously. Moreover, the public, persistent nature of blogs can help students practice more integrative learning, finding connections among their personal, professional, and academic experiences.
           </q-card-section>
         </div>
       </q-slide-transition>
@@ -88,7 +118,7 @@
     </div>
   </q-card>
 
-  <q-card>
+  <q-card flat>
     <h5 style="text-align:center;"> 3.Software Testing</h5>
   
   
@@ -189,6 +219,7 @@
   export default {
     setup () {
       return {
+        persistent: ref(false),
         expanded: ref(false),
         image:image,
         mobile:mobile,
